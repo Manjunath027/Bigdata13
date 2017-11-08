@@ -1,0 +1,16 @@
+HBASE					RDBMS
+1. Column Oriented 			1. Row Oriented
+
+2. flexible schema,add columns		2. Fixed						Schema 
+on the fly.
+
+3. Good with Sparse tables		3. Not 							optimized 					for sparse 						tables.
+
+4. Joins using MR not optimised		4. Optimized
+
+5. Tight integration with MR		5. No Tight 					Integration
+
+6. Horizontally scalable		6. Hard to 					shard and 					scale.
+
+
+7. Good for semi- and un-structured	7. Good for 						structured 

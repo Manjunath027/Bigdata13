@@ -1,0 +1,15 @@
+What is CAP Theorem?
+
+CAP theorem states that any database system can only attain two out of following states which is Consistency, Availability and Partition Tolerance. Following is a brief definition of these three terms:
+
+Consistency: Any changes to a particular record stored in database, in form of inserts, updates or deletes is seen as it is, by other users accessing that record at that particular time. If they don’t see the updated data, it is termed as eventual consistency.
+Availability: The system continues to work and serve data inspite of node failures.
+Partition Tolerance: The database system could be stored based on distributed architecture such as Hadoop (HDFS).
+
+CAP theorem – Consistency, Availability, Partition
+Tolerance.
+
+Examples
+1. RDBMS systems such as Oracle, MySQL etc supports consistency and availability.
+2. NoSQL datastore such as HBase supports Consistency and Partition Tolerance.
+3. NoSQL datastore such as Cassandra, CouchDB supports Availability and Partition Tolerance.

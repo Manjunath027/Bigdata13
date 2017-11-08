@@ -1,0 +1,35 @@
+HBASE ARCHITECTURE
+
+HBase provides low-latency random reads and writes on top of HDFS. In HBase, tables are dynamically distributed by the system whenever they become too large to handle (Auto Sharding). The simplest and foundational unit of horizontal scalability in HBase is a Region. A continuous, sorted set of rows that are stored together is referred to as a region (subset of table data).  HBase architecture has a single HBase master node (HMaster) and several slaves i.e. region servers. Each region server (slave) serves a set of regions, and a region can be served only by a single region server. Whenever a client sends a write request, HMaster receives the request and forwards it to the corresponding region server.
+
+HBase can be run in a multiple master setup, wherein there is only single active master at a time. HBase tables are partitioned into multiple regions with every region storing multiple table’s rows.
+
+Components of Apache HBase Architecture
+
+HBase architecture has 3 important components- HMaster, Region Server and ZooKeeper.
+
+HMaster
+
+HBase HMaster is a lightweight process that assigns regions to region servers in the Hadoop cluster for load balancing. Responsibilities of HMaster –
+
+Manages and Monitors the Hadoop Cluster
+Performs Administration (Interface for creating, updating and deleting tables.)
+Controlling the failover
+DDL operations are handled by the HMaster
+Whenever a client wants to change the schema and change any of the metadata operations, HMaster is responsible for all these operations.
+
+HBase can be run in a multiple master setup, wherein there is only single active master at a time. HBase tables are partitioned into multiple regions with every region storing multiple table’s rows.
+
+Components of Apache HBase Architecture
+
+HBase architecture has 3 important components- HMaster, Region Server and ZooKeeper.
+
+HMaster
+
+HBase HMaster is a lightweight process that assigns regions to region servers in the Hadoop cluster for load balancing. Responsibilities of HMaster –
+
+Manages and Monitors the Hadoop Cluster
+Performs Administration (Interface for creating, updating and deleting tables.)
+Controlling the failover
+DDL operations are handled by the HMaster
+Whenever a client wants to change the schema and change any of the metadata operations, HMaster is responsible for all these operations.
